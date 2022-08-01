@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header sticky-top add">
+        <div class="d-flex bg-white">
+            <div class="col-3 mt-1">
+                <div class="d-flex">
+                    <div class="col-5">
+
+                    </div>
+                    <div class="col-7">
+                        <div class="float-left">
+                            <div class="img-logo">
+                                <a href="./index.html"> <img src="./images/logo.jpg" alt=""
+                                        style="width: 140px!important;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-9 bg-success">
+                <div class="d-flex h-100 align-items-center" style="margin-right: 0;">
+                    <div class="col-5 d-flex ">
+                        <ul class="nav ml-3">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="./index.html"> <button class="btn btn-success"
+                                        type="button">TRANG CHỦ</button></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white" href="./products.html"><button class="btn btn-success"
+                                        type="button">ĐỒ ĂN</button></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./restaurant.html"><button class="btn btn-success"
+                                        type="button">NHÀ HÀNG</button></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="search" value=""
+                                id="example-search-input" placeholder="Type here to search">
+                            <span class="input-group-append">
+                                <button class="btn btn-success border-left-0 border" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex">
+                            <div class="col-4 text-white text-center">
+                                <a href="./cart.html"><button class="bg-success cart"><i
+                                            class="fa fa-shopping-bag"><span class="count">0</span></i></button></a>
+                            </div>
+                            <div class="col-1">
+
+                            </div>
+                            <div class="col-7">
+                                <a href="./login.html"><button type="button" class="btn btn-success mt-1 ">Đăng
+                                        nhập</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end header -->
+
+    <div class="content">
+        <main class="page text-success">
+            <section class="shopping-cart dark">
+                <div class="container">
+                    <div class="block-heading">
+                        <h2 class="text-success">Giỏ hàng của bạn</h2>
+                        <p>Hiện đang có 7 món ăn.</p>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-8">
+                                <div class="items">
+                                    <div class="product border-bottom text-dark ml-3">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img class="img-fluid mx-auto my-5 d-block image"
+                                                    src="./images/food1.jpg">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="col-md-5 product-name">
+                                                            <div class="product-name">
+                                                                <h5>Trà sữa</h5>
+                                                                <div class="product-info">
+                                                                    <div>Mô tả: <span class="value">Thơm ngon, nhiều
+                                                                            Trân châu đen, trân châu trắng, pudding,
+                                                                            flan, thạch củ năng, thạch phô mai, thạch
+                                                                            bắp </span></div>
+                                                                    <div>Giá: <span class="value">50000 VND</span></div>
+                                                                    <div>Thời gian: <span class="value">20 phút</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 quantity">
+                                                            <label for="quantity">Quantity:</label>
+                                                            <input id="quantity" type="number" value="1"
+                                                                class="form-control quantity-input" min="0">
+                                                        </div>
+                                                        <div class="col-md-3 price text-center">
+                                                            <label class="font-weight-light">Price:</label>
+                                                            <p>$120</p>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-refresh"></i>
+                                                            </button>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product border-bottom text-dark ml-3">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img class="img-fluid mx-auto my-5 d-block image"
+                                                    src="./images/food1.jpg">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="col-md-5 product-name">
+                                                            <div class="product-name">
+                                                                <h5>Trà sữa</h5>
+                                                                <div class="product-info">
+                                                                    <div>Mô tả: <span class="value">Thơm ngon, nhiều
+                                                                            Trân châu đen, trân châu trắng, pudding,
+                                                                            flan, thạch củ năng, thạch phô mai, thạch
+                                                                            bắp </span></div>
+                                                                    <div>Giá: <span class="value">50000 VND</span></div>
+                                                                    <div>Thời gian: <span class="value">20 phút</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 quantity">
+                                                            <label for="quantity">Quantity:</label>
+                                                            <input id="quantity" type="number" value="1"
+                                                                class="form-control quantity-input" min="0">
+                                                        </div>
+                                                        <div class="col-md-3 price text-center">
+                                                            <label class="font-weight-light">Price:</label>
+                                                            <p>$120</p>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-refresh"></i>
+                                                            </button>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product border-bottom text-dark ml-3">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <img class="img-fluid mx-auto my-5 d-block image"
+                                                    src="./images/food1.jpg">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="col-md-5 product-name">
+                                                            <div class="product-name">
+                                                                <h5>Trà sữa</h5>
+                                                                <div class="product-info">
+                                                                    <div>Mô tả: <span class="value">Thơm ngon, nhiều
+                                                                            Trân châu đen, trân châu trắng, pudding,
+                                                                            flan, thạch củ năng, thạch phô mai, thạch
+                                                                            bắp </span></div>
+                                                                    <div>Giá: <span class="value">50000 VND</span></div>
+                                                                    <div>Thời gian: <span class="value">20 phút</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 quantity">
+                                                            <label for="quantity">Quantity:</label>
+                                                            <input id="quantity" type="number" value="1"
+                                                                class="form-control quantity-input" min="0">
+                                                        </div>
+                                                        <div class="col-md-3 price text-center">
+                                                            <label class="font-weight-light">Price:</label>
+                                                            <p>$120</p>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-refresh"></i>
+                                                            </button>
+                                                            <button
+                                                                class="btn btn-success border-secondary bg-white text-dark mb-2">
+                                                                <i class="fa fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-table mt-5 text-center">
+                                        <h5><strong>Chọn bàn: </strong></h5>
+                                    </div>
+
+                                    <div class="note-item py-5 text-center">
+                                        <label for="note">Ghi chú thêm</label>
+                                        <textarea class="form-control ml-3" id="note" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 col-lg-4" style=" 
+                                background-color: #f7fbff;
+                             ">
+                                <div class="summary">
+                                    <h3>Summary</h3>
+                                    <div class="summary-item"><span class="text">Subtotal</span><span
+                                            class="price">$360</span></div>
+                                    <div class="summary-item"><span class="text">Discount</span><span
+                                            class="price">$0</span></div>
+                                    <div class="summary-item"><span class="text">Total</span><span
+                                            class="price">$360</span></div>
+                                    <button type="button" class="btn btn-success btn-lg btn-block">Checkout</button>
+                                    <a href="./products.html" style="color:white; text-decoration:none;"><button
+                                            type="button" class="btn btn-primary btn-lg btn-block">Continue
+                                            Order</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- footer -->
+    <div class="footer bg-white">
+        <div class="before-footer text-center">
+            <small class="text-primary">Cảm ơn vì luôn tin tưởng và lựa chọn chúng tôi.</small>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-3 text-blue">
+                    <h4 class="mb-4">Về VNREST</h4>
+                    <div class="text">
+                        <p>Đưa đến chất lượng sản phẩm tốt nhất với một giá thành hợp lí nhất. Luôn đặt khách hàng là
+                            tiêu
+                            chuẩn hàng đầu. Tự hào là nhà hàng nhận được sự hài lòng của 99,99% khách hàng!</p>
+                    </div>
+
+                </div>
+                <div class="col-3">
+
+                    <div class="mt-5 text">
+                        <p><strong>Điện thoại:</strong> 0855494217</p>
+                        <p><strong>Email:</strong> mdr3132003@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="mb-4">Hỗ trợ khách hàng</h4>
+                    <ul class="text">
+                        <li>Tìm kiếm</li>
+                        <li>Giới thiệu</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Điều khoản dịch vụ</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 class="mb-4">Chăm sóc khách hàng</h4>
+                    <div class="row">
+                        <i class="fa fa-volume-control-phone ml-3" style="font-size:48px;color:red"></i>
+                        <div class="ml-3 text">
+                            <p>0855494217</p>
+                            <p>mdr3132003@gmail.com</p>
+                        </div>
+                    </div>
+                    <h4>Follow us </h4>
+                    <a href="https://www.facebook.com/profile.php?id=100023576839796"><button type="button"
+                            class="btn btn-outline-dark mr-2"><i class="fa fa-facebook px-1"></i></button></a>
+                    <a href="https://www.facebook.com/profile.php?id=100023576839796"><button type="button"
+                            class="btn btn-outline-dark mr-3"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100023576839796"><button type="button"
+                            class="btn btn-outline-dark "><i class="fa fa-twitter"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+</body>
+
+</html>
